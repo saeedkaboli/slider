@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #All{
+            width: 80%;
+            height: 500px;
+            /* border: 1px solid black; */
+            position: relative;
+            overflow: hidden;
+        }
+        .parent{
+            width: 90%;
+            height: 70%;
+            /* border: 1px solid red; */
+            position: absolute;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            transition: 1s;
+            right: 0;
+        }
+        #box{
+            width: 40%;
+            height: 90%;
+            background-color: #fff;
+        }
+        #one{
+            /* border: 1px solid red; */
+            left: -50%;
+        }
+        #one>#box{
+            background-color: orange;
+        }
+        #two{
+            /* border: 1px solid green; */
+            left: -50%;
+        }
+        #two>#box{
+            background-color: green;
+        }
+        #three{
+            /* border: 1px solid purple; */
+            left: -50%;
+        }
+        #three>#box{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="All">
+        <div class="parent" id="one">
+            <div id="box"></div>
+            <div id="box"></div>
+        </div>
+        <div class="parent" id="two">
+            <div id="box"></div>
+            <div id="box"></div>
+        </div>
+        <div class="parent" id="three">
+            <div id="box"></div>
+            <div id="box"></div>
+        </div>
+    </div>
+</body>
+<script src="assets/All.js"></script>
+</html>
